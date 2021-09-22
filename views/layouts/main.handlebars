@@ -11,34 +11,45 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
         crossorigin="anonymous"
 	/>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
 <body>
+    <!-- HEADER and NAV -->
     <div class="container">
-        <header>
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
             <nav class="navbar fixed-top navbar-light bg-light">
-                <div class="container-fluid">
-                    <!-- {{#if loggedIn}} -->
-                    <a class="navbar-brand" href="#">
-                        <img class="" src="/images/techblog-header.png" alt="">
-                    home</a>
-                    <a href="/dashboard">dashboard</a>
-                    <button id="logout" class="btn-no-style">logout</button>
-                    <!-- {{else}}
-                    <a href="/">home</a>
-                    <a href="/login">login</a>
-                    {{/if}} -->
-                </div>
+                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                    <img class="" src="./images/techblog-header.png" alt="" width="350">
+                </a>
+                <ul class="nav fs-5 custom-link">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="#">home</a>
+                    </li>
+                    {{#if loggedIn}}
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="/dashboard">dashboard</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link custom-link" href="/logout">logout</a>
+                    </li>
+                    {{else}}
+                    <li class="nav-item"> 
+                        <a class="nav-link custom-link" href="/login">login</a>
+                    </li>
+                    {{/if}}
+                </ul>
             </nav>
         </header>
+    </div>
+    <div class="container content-area">
         <main>
-       <!-- {{{ body }}} -->
+        {{{ body }}}
         </main>
     </div>
-<!-- {{#if loggedIn}} 
+{{#if loggedIn}} 
 <script src="/javascript/logout.js"></script>
-{{/if}} -->
+{{/if}}
 </body>
 
 </html>
