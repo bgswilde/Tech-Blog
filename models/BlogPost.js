@@ -35,4 +35,4 @@ BlogPost.init(
     }
 )
 
-module.exports = User;
+module.exports = BlogPost;
