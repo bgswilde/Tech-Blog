@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    padding-top: 145px;
+}
+
+.custom-link {
+    color: rgb(43, 43, 43)
+}
+
+.custom-link :hover {
+    color: goldenrod;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.content-area {
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+
+@media screen and (min-width: 645px) {
+    body { padding-top: 120px; }
+}
+
+
+@media screen and (min-width: 768px) {
+    body { padding-top: 110px; }
+}
