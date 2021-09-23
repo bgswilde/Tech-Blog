@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { BlogPost } = require('../../models');
 
+// get needed blogpost data for displaying all posts (similar to home-routes, may not be needed here)
 router.get('/', (req, res) => {
     BlogPost.findAll({
         attributes: [
@@ -33,7 +34,7 @@ router.get('/', (req, res) => {
         });
 });
 
-// get a single post
+// get a single blogpost
 router.get('/:id', (req, res) => {
     BlogPost.findOne({
         where: {
