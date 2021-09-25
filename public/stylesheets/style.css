@@ -15,10 +15,38 @@ body {
 }
 
 .content-area {
-    background-color: rgb(41, 41, 41);
+    /* background-color: rgb(41, 41, 41); */
     color: white;
 }
 
+.card {
+    margin: 20px auto;
+    background-color: none;
+}
+
+.card-header {
+    color: goldenrod;
+    background-color: rgba(245, 245, 245, 0.94);
+}
+
+.card-body {
+    background-color: rgb(31, 31, 31);
+}
+
+.card-text {
+    color: white;
+}
+
+.btn-blogpost {
+    background-color: rgb(136, 14, 160);
+    color: white;
+}
+
+.card-footer {
+    align-items: center;
+    background-color: goldenrod;
+    color: white;
+}
 
 @media screen and (min-width: 645px) {
     body { padding-top: 120px; }
