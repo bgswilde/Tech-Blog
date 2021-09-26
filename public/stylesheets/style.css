@@ -48,6 +48,26 @@ body {
     color: white;
 }
 
+.login-heading {
+    color: goldenrod;
+}
+
+.btn-login {
+    background-color: goldenrod;
+    color: white;
+    margin: 10px auto;
+}
+
+.signup-heading {
+    color: rgb(228, 228, 228);
+}
+
+.btn-signup {
+    background-color: rgb(136, 14, 160);
+    color: white;
+    margin: 10px auto;
+}
+
 @media screen and (min-width: 645px) {
     body { padding-top: 120px; }
 }
