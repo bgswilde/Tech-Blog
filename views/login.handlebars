@@ -1,6 +1,6 @@
 <!-- login form -->
 <h2 class="login-heading">Returning? Log in here:</h2>
-<form>
+<form id="login">
     <div class="form-group col-md-7 col-xl-5">
         <label for="username-login">Username</label>
         <input type="text" class="form-control" id="username-login">
@@ -9,12 +9,17 @@
     <label for="password-login">Password</label>
     <input type="password" class="form-control" id="password-login">
   </div>
-  <button type="submit" class="btn btn-login">Log In</button>
+  <div>
+    <button type="submit" class="btn btn-login">Log In</button>
+  </div>
+  <div id="failed-login" class="fst-italic m-3 hidden">
+    <p>Log In Failed. Please try again.</p>
+  </div>
 </form>
 <!-- signup form -->
 <br />
 <h2 class="signup-heading">First Time? Sign up here:</h2>
-<form>
+<form id="signup">
     <div class="form-group col-md-7 col-xl-5">
         <label for="username-signup">Choose a Username:</label>
         <input type="text" class="form-control" id="username-signup" />
@@ -25,6 +30,9 @@
     </div>
     <div>
         <button type="submit" class="btn btn-signup">Sign Up!</button>
+    </div>
+    <div id="failed-signup" class="fst-italic hidden">
+        <p>Sign Up Failed. Please try again.</p>
     </div>
 </form>
 <script src="/javascript/login.js"></script>

@@ -23,9 +23,11 @@ app.use(session(sess));
 
 const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
+const { addHook } = require('./models/User');
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-const { addHook } = require('./models/User');
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

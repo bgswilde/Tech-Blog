@@ -68,6 +68,10 @@ body {
     margin: 10px auto;
 }
 
+.hidden {
+    display: none;
+}
+
 @media screen and (min-width: 645px) {
     body { padding-top: 120px; }
 }

@@ -1,3 +1,8 @@
+const failSignup = document.getElementById('failed-signup');
+const failLogin = document.getElementById('failed-login');
+const signupForm = document.getElementById('signup')
+const loginForm = document.getElementById('signup')
+
 async function signupFormHandler(event) {
     event.preventDefault();
 
@@ -16,9 +21,12 @@ async function signupFormHandler(event) {
         
         // check the response status
         if (response.ok) {
-            console.log('success');
+            console.log('Signup Worked!');
+            document.location.replace('/dashboard');
         } else {
-            alert(response.statusText)
+            signupForm.reset();
+            failedSignupMessage();
+            alert(response.statusText);
         }
     }
 }
@@ -42,10 +50,26 @@ async function loginFormHandler(event) {
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
+            loginForm.reset();
+            failedLoginMessage();
             alert(response.statusText);
         }
     }
 }
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+function failedLoginMessage() {
+    failLogin.classList.remove("hidden");
+    setTimeout(function() {
+        failLogin.classList.add("hidden")
+    }, 4000)
+}
+
+function failedSignupMessage() {
+    failSignup.classList.remove("hidden");
+    setTimeout(function() {
+        failSignup.classList.add("hidden")
+    }, 4000)
+}
+
+signupForm.addEventListener('submit', signupFormHandler);
+loginForm.addEventListener('submit', loginFormHandler);

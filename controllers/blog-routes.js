@@ -47,7 +47,9 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
-    res.render('login');
+    res.render('login', {
+        loggedIn: req.session.loggedIn
+    });
 });
 
 router.get('/post/:id', (req, res) => {
