@@ -1,14 +1,14 @@
-async function newFormHandler(event) {
+async function newBlogpostHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
-    const content = document.querySelector('input[name="post-url"]').value;
+    const title = document.querySelector('#blogpost-title').value;
+    const content = document.querySelector('#blogpost-content').value;
   
-    const response = await fetch(`/api/posts`, {
-      method: 'POST',
+    const response = await fetch('/api/blogposts', {
+      method: 'post',
       body: JSON.stringify({
-        title,
-        content
+        title: title,
+        content: content
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -16,10 +16,11 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
+      console.log(`${title} created`)
       document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }
   }
   
-  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+  document.getElementById('new-blogpost').addEventListener('submit', newBlogpostHandler);

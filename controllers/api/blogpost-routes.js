@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { BlogPost } = require('../../models');
+const { BlogPost, User, Comment } = require('../../models');
 
 // get needed blogpost data for displaying all posts (similar to home-routes, may not be needed here)
 router.get('/', (req, res) => {
