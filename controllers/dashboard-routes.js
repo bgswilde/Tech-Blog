@@ -4,10 +4,6 @@ const { BlogPost, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    res.render('dashboard', { loggedIn: true });
-})
-
-router.get('/', (req, res) => {
     BlogPost.findAll({
         where: {
             user_id: req.session.user_id

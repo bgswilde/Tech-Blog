@@ -68,6 +68,12 @@ body {
     margin: 10px auto;
 }
 
+.edit-btn {
+    background-color: rgb(104, 255, 245);
+    color: rgb(0, 0, 0);
+    margin: 5px auto;
+}
+
 .hidden {
     display: none;
 }
