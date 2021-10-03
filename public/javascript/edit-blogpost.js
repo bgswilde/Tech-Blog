@@ -1,3 +1,4 @@
+// function to edit the data using the front end form to the blogpost model on the backend (async to handle the fetch request)
 async function editFormHandler(event) {
     event.preventDefault();
   

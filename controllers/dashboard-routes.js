@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const { BlogPost, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// route to get all of a users posts to render to their dashboard
 router.get('/', withAuth, (req, res) => {
     BlogPost.findAll({
         where: {
@@ -31,6 +32,7 @@ router.get('/', withAuth, (req, res) => {
             }
         ]
     })
+        // handle errors, serialize the data and render the dashboard.handlebars page
         .then(dbBlogpostData => {
             const blogposts = dbBlogpostData.map(blogpost => blogpost.get({ plain: true }));
             res.render('dashboard', { blogposts, loggedIn: req.session.loggedIn });
@@ -41,7 +43,7 @@ router.get('/', withAuth, (req, res) => {
         });
 });
 
-
+// route to get the info on a single blogpost in order to edit on the rendered edit-blogpost.handlebars page
 router.get('/edit/:id', withAuth, (req, res) => {
     BlogPost.findOne({
         where: {
@@ -69,6 +71,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
             }
         ]
     })
+        // handle errors, serialize the data and render the edit-blogpost.handlebars page
         .then(dbBlogpostData => {
             if (!dbBlogpostData) {
                 res.status(404).json({ message: 'No post found with this id' });

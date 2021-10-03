@@ -1,3 +1,4 @@
+// function to add the data from the front end form to the blogpost model on the backend (async to handle the fetch request)
 async function newBlogpostHandler(event) {
     event.preventDefault();
   

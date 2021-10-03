@@ -3,9 +3,11 @@ const failLogin = document.getElementById('failed-login');
 const signupForm = document.getElementById('signup')
 const loginForm = document.getElementById('login')
 
+// function to add the data from the front end form to the user model on the backend (async to handle the fetch request)
 async function signupFormHandler(event) {
     event.preventDefault();
 
+    // user input data
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
@@ -19,7 +21,7 @@ async function signupFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         });
         
-        // check the response status
+        // check the response status, send the user to the dashboard when they are logged in
         if (response.ok) {
             console.log('Signup Worked!');
             document.location.replace('/dashboard');
@@ -31,6 +33,7 @@ async function signupFormHandler(event) {
     }
 }
 
+// function to use the data from the front end form to verify a user identity and log in (async to handle the fetch request)
 async function loginFormHandler(event) {
     event.preventDefault();
 
@@ -47,6 +50,7 @@ async function loginFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         });
 
+        // check the response status, send the user to the dashboard when they are logged in
         if (response.ok) {
             console.log(response)
             debugger;

@@ -1,8 +1,9 @@
+// function to add the data from the front end form to the comment model on the backend (async to handle the fetch request)
 async function commentFormHandler(event) {
     event.preventDefault();
   
     const comment_text = document.querySelector('#comment-text').value.trim();
-  
+    // gets the blogpost id from end of the current url 
     const blogpost_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];

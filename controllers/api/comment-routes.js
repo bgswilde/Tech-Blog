@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
     }
 });
 
-// deletes the comment (fetched in public/javascript/comment.js)
+// deletes the comment. currently only used in backend, not fetched in front end
 router.delete('/:id', (req, res) => {
     Comment.destroy({
         where: {
