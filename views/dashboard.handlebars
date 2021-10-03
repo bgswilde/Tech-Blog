@@ -2,11 +2,11 @@
   <h2 class="login-heading">Create New Post</h2>
 
   <form id="new-blogpost">
-    <div class="form-group col-md-7 col-xl-5 mb-3">
+    <div class="form-group col-md-7 col-xl-5 mb-3 w-100">
       <label for="blogpost-title">Title</label>
       <input type="text" id="blogpost-title" class="form-control" />
     </div>
-    <div class="form-group col-md-7 col-xl-5 mb-3">
+    <div class="form-group col-md-7 col-xl-5 mb-3 w-100">
       <label for="blogpost-content">What do you have to say?</label>
       <textarea id="blogpost-content" class="form-control" rows="5"></textarea>
     </div>
@@ -14,6 +14,7 @@
   </form>
 </section>
 {{#if blogposts.length}}
+<hr class="mb-2"/>
 <section>
   <h2>Your Posts</h2>
     {{#each blogposts as |post|}}

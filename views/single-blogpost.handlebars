@@ -1,13 +1,13 @@
 {{> single-with-comments blogpost}}
 
 {{#if loggedIn}}
-<form id="add-comment">
-<div class="form-group col-md-7 col-xl-5 my-3">
-  <textarea id="comment-text" class="form-control" rows="3" placeholder="Give your comment here, and use kindness!"></textarea>
+<form id="add-comment" class="comments">
+<div class="form-group col-md-7 col-xl-5 my-3 w-100">
+  <textarea id="comment-text" class="form-control w-100" rows="3" placeholder="Give your comment here, and use kindness!"></textarea>
 </div>
 
 <div>
-  <button type="submit" class="btn btn-login" id="add-comment-btn">add comment</button>
+  <button type="submit" class="btn btn-signup" id="add-comment-btn">add comment</button>
 </div>
 </form>
 {{/if}}

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { BlogPost, User, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get needed blogpost data for displaying all posts (similar to home-routes, may not be needed here)
 router.get('/', (req, res) => {
@@ -89,7 +90,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    Post.update(
+    BlogPost.update(
         {
             title: req.body.title,
             content: req.body.content

@@ -1,7 +1,7 @@
 const failSignup = document.getElementById('failed-signup');
 const failLogin = document.getElementById('failed-login');
 const signupForm = document.getElementById('signup')
-const loginForm = document.getElementById('signup')
+const loginForm = document.getElementById('login')
 
 async function signupFormHandler(event) {
     event.preventDefault();
@@ -48,6 +48,8 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
+            console.log(response)
+            debugger;
             document.location.replace('/dashboard');
         } else {
             loginForm.reset();

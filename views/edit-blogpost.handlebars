@@ -1,0 +1,17 @@
+<section>
+  <h2 class="login-heading">Edit "{{blogpost.title}}" Post</h2>
+
+  <form id="edit-blogpost">
+    <div class="form-group col-md-7 col-xl-5 mb-3 w-100">
+      <label for="edit-title">Edit Title</label>
+      <input type="text" id="edit-title" class="form-control" value="{{blogpost.title}}" />
+    </div>
+    <div class="form-group col-md-7 col-xl-5 mb-3 w-100">
+      <label for="edit-content">Edit Content</label>
+      <textarea id="edit-content" class="form-control" rows="5">{{blogpost.content}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-signup" id="submit-edit">Save</button>
+  </form>
+</section>
+
+<script src="/javascript/edit-blogpost.js"></script>
