@@ -29,6 +29,10 @@ body {
     background-color: rgba(245, 245, 245, 0.94);
 }
 
+.card-header h3 {
+    margin: .5rem auto;
+}
+
 .card-body {
     background-color: rgb(31, 31, 31);
 }
@@ -46,6 +50,14 @@ body {
     align-items: center;
     background-color: goldenrod;
     color: white;
+}
+
+.card-footer p {
+    margin: .5rem auto; 
+}
+
+.comment-footer {
+    background-color:rgb(136, 14, 160)
 }
 
 .login-heading {
@@ -72,6 +84,10 @@ body {
     background-color: rgb(104, 255, 245);
     color: rgb(0, 0, 0);
     margin: 5px auto;
+}
+
+.comments {
+    margin: auto 20px;
 }
 
 .hidden {

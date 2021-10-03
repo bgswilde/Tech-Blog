@@ -87,7 +87,7 @@ router.get('/post/:id', (req, res) => {
 
             const blogpost = dbBlogPostData.get({ plain: true });
 
-            res.render('single-post', {
+            res.render('single-blogpost', {
                 blogpost,
                 loggedIn: req.session.loggedIn
             });

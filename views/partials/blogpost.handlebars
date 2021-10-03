@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
     <p class="card-text">{{content}}</p>
-    <a href="#" class="btn btn-blogpost">View & Comment</a>
+    <a href="/post/{{id}}" class="btn btn-blogpost">View & Comment</a>
   </div>
   <div class="card-footer">
     <p> by {{user.username}} on {{format_date created_at}}  | {{comments.length}} {{format_plural "comment" comments.length}}</p>

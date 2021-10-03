@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{title}}</h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{content}}</p>
+  </div>
+  <div class="card-footer">
+    <p> by {{user.username}} on {{format_date created_at}}  | {{comments.length}} {{format_plural "comment" comments.length}}</p>
+  </div>
+</div>
+
+<div class="comments">
+    {{#each comments}}
+    <div class="card">
+        <div class="card-body">
+            <div class="card-text">
+            {{comment_text}}
+            </div>
+            <div class="card-footer comment-footer mt-3">
+                {{user.username}} on {{format_date created_at}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
